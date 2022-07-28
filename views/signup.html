@@ -4,13 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>타이틀 - 이디야 커피</title>
+    <title>회원 가입 - 이디야 커피</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body>
     <header></header>
-    <main></main>
+
+    <main>
+      <h1 class="title">회원가입</h1>
+
+      <p class="description">
+        <span lang="en" class="description--en">Join Us, Ediya Coffee</span>
+        <span class="description--ko">이디야멤버스 가입을 진행합니다.</span>
+      </p>
+
+      <form action="" method="POST" class="signupForm">
+        <fieldset>
+          <legend>회원가입 폼</legend>
+          <label for="emailInput" class="signupForm__label emailInput__label">이메일</label>
+          <input
+            id="emailInput"
+            type="email"
+            required
+            placeholder="야무@euid.dev"
+            name="email"
+            class="signupForm__label emailInput__input"
+          />
+
+          <label for="passwordInput" class="signupForm__label passwordInput__label">패스워드</label>
+          <input
+            id="passwordInput"
+            type="password"
+            required
+            name="password"
+            class="signupForm__label passwordInput__input"
+          />
+
+          <label for="passwordCheckInput" class="signupForm__label passwordCheckInput__label"
+            >패스워드 확인</label
+          >
+          <input
+            id="passwordCheckInput"
+            type="password"
+            required
+            name="password"
+            class="signupForm__label passwordCheckInput__input"
+          />
+
+          <button type="submit">가입하기</button>
+          <a href="./login.html">로그인</a>
+        </fieldset>
+      </form>
+    </main>
+
     <footer></footer>
   </body>
 </html>
