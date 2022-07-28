@@ -4,13 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>타이틀 - 이디야 커피</title>
+    <title>회원 가입 - 이디야 커피</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body>
+    <div class="videoControlModal">
+      <p>ESC 키를 누르면 비디오를 일시정지 하거나, 다시 재생할 수 있습니다.</p>
+      <button>확인</button>
+    </div>
+
     <header></header>
-    <main></main>
+
+    <main>
+      <h2 class="title">회원가입</h2>
+
+      <p class="description">
+        <span lang="en" class="description--en">Join Us, Ediya Coffee</span>
+        <span class="description--ko">이디야멤버스 가입을 진행합니다.</span>
+      </p>
+
+      <form action="" method="POST" class="signupForm">
+        <fieldset>
+          <legend>회원가입 폼</legend>
+          <label for="emailInput" class="signupForm__label emailInput__label">이메일</label>
+          <input
+            id="emailInput"
+            type="email"
+            required
+            placeholder="야무@euid.dev"
+            name="email"
+            class="signupForm__input emailInput__input"
+          />
+          <img src="../assets/images/icon-warning.svg" alt="" class="invalidWarning" />
+          <p class="invalidWarning">이메일 입력 방법이 잘못되었습니다. (예: user@domain.io)</p>
+
+          <label for="passwordInput" class="signupForm__label passwordInput__label">패스워드</label>
+          <input
+            id="passwordInput"
+            type="password"
+            required
+            name="password"
+            class="signupForm__input passwordInput__input"
+          />
+          <button><img src="../assets/images/icon-visible.svg" alt="비밀번호 보기" /></button>
+          <img src="../assets/images/icon-warning.svg" alt="" class="invalidWarning" />
+          <p class="invalidWarning">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</p>
+
+          <label for="passwordCheckInput" class="signupForm__label passwordCheckInput__label"
+            >패스워드 확인</label
+          >
+          <input
+            id="passwordCheckInput"
+            type="password"
+            required
+            name="password"
+            class="signupForm__label passwordCheckInput__input"
+          />
+          <button><img src="../assets/images/icon-visible.svg" alt="비밀번호 보기" /></button>
+          <img src="../assets/images/icon-warning.svg" alt="" class="invalidWarning" />
+          <p class="invalidWarning">패스워드가 일치하지 않습니다.</p>
+
+          <button type="submit" class="button--fill">가입하기</button>
+          <a href="./login.html" class="button--empty">로그인</a>
+        </fieldset>
+      </form>
+    </main>
+
     <footer></footer>
   </body>
 </html>
