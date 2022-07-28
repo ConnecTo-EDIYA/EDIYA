@@ -16,14 +16,14 @@
 
   <body>
     <div class="skipNav">
-      <a href="#" class="skipNav">
+      <a href="#main" class="skipNav">
         <span>본문 바로가기</span>
       </a>
     </div>
     <header>
       <h1 class="logo">
         <a href="/" class="logo__link"
-          ><img src="/assets/images/brand.svg" alt="이디야 커피 로고"
+          ><img src="./assets/images/brand.svg" alt="이디야 커피 로고"
         /></a>
       </h1>
       <button class="header__button">
@@ -35,22 +35,22 @@
         <h2 class="sr-only">메인 메뉴바</h2>
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a class="navigation__link" href="/">로그인</a>
+            <a class="navigation__link" href="./views/login.html">로그인</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="/">회원가입</a>
+            <a class="navigation-link" href="./views/signup.html">회원가입</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="/">이디야 디자인</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="/">이디야 음료</a>
+            <a class="navigation__link" href="./views/beverage.html">이디야 음료</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="/">이디야 뉴스</a>
+            <a class="navigation__link" href="./views/news.html">이디야 뉴스</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="/">매장 찾기</a>
+            <a class="navigation__link" href="./views/store.html">매장 찾기</a>
           </li>
         </ul>
         <button type="button" aria-label="메뉴 닫기">
@@ -58,7 +58,7 @@
         </button>
       </nav>
     </header>
-    <main>
+    <main id="main">
       <article class="main__ediyamenu">
         <h2 class="sr-only">이디야의 다양한 메뉴 소개</h2>
         <p class="main__catchphrase">ALWAYS BESIDE YOU <span>EDITA COFFEE</span></p>
@@ -122,6 +122,7 @@
         <img src="./assets/images/icon-arrow-darkblue.svg" alt="" />
       </button>
     </main>
+
     <footer>
       <ul class="guide__list">
         <li><a href="/" class="guide__link">개인정보처리방침</a></li>
