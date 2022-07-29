@@ -1,4 +1,6 @@
-@use './variables';
+@use "./variables" as *;
+@use "./../utils" as *;
+
 
 // 색상 관련 mixin
 @mixin primaryFill() {
@@ -43,6 +45,43 @@
 	padding-left: rem($paddingX);
 	padding-right: rem($paddingX);
 }
+@mixin marginX($marginX: 0){
+  margin-left: rem($marginX);
+  margin-right: rem($marginX);
+}
+@mixin marginY($marginY: 0){
+  margin-top: rem($marginY);
+  margin-bottom: rem($marginY);
+}
+@mixin paddingY($paddingY: 0) {
+  padding-top: rem($paddingY);
+  padding-bottom: rem($paddingY);
+}
+@mixin paddingX($paddingX: 0) {
+  padding-left: rem($paddingX);
+  padding-right: rem($paddingX);
+}
+
+@mixin marginX($marginX: 0){
+  margin-left: rem($marginX);
+  margin-right: rem($marginX);
+}
+
+@mixin marginY($marginY: 0){
+  margin-top: rem($marginY);
+  margin-bottom: rem($marginY);
+}
+
+@mixin paddingY($paddingY: 0) {
+  padding-top: rem($paddingY);
+  padding-bottom: rem($paddingY);
+}
+
+@mixin paddingX($paddingX: 0) {
+  padding-left: rem($paddingX);
+  padding-right: rem($paddingX);
+}
+
 @mixin posBottom($b: 0, $pos: absolute) {
 	position: $pos;
 	bottom: $b;
@@ -56,14 +95,26 @@
 	align-items: $a;
 	flex-wrap: $w;
 }
+@mixin posTop($t: 0, $r: 0, $tr: -50%, $pos: absolute) {
+  position: $pos;
+  top: $t;
+  right: $r;
+  transform: translateX($tr);
+}
+
 //너비 제한 후 가운데 정렬
 @mixin maxWidthCenter($mw) {
-	max-width: rem($mw);
-	@include autoMargin;
+  max-width: rem($mw);
+  @include autoMargin;
 }
+
 // 말줄임 mixin
 @mixin textEllipis {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+}
+@mixin squareBox($w: 0, $h: 0) {
+	width: $w;
+	height: $h;
 }

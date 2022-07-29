@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>타이틀 - 이디야 커피</title>
+		<title>이디야 뉴스 - 이디야 커피</title>
 		<link
 			href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
 			rel="stylesheet"
@@ -304,70 +304,40 @@
 						</tr>
 					</tbody>
 				</table>
-
-				<!-- 페이지네이션 -->
-				<div class="pagination">
-					<ol class="pagination__list">
-						<li class="pagination__item">
-							<a href="/" class="pagination__link">1</a>
-						</li>
-						<li class="pagination__item">
-							<a href="/" class="pagination__link">2</a>
-						</li>
-						<li class="pagination__item">
-							<a href="/" class="pagination__link">3</a>
-						</li>
-						<li class="pagination__item">
-							<a href="/" class="pagination__link">4</a>
-						</li>
-						<li class="pagination__item">
-							<a href="/" class="pagination__link">5</a>
-						</li>
-					</ol>
-					<button
-						class="pagination__button button--prev"
-						type="button"
-						title="이전 페이지로 이동"
-					>
-						<img
-							src="./../assets/images/button-prev.svg"
-							width="16"
-							height="16"
-							alt=""
-						/>
-					</button>
-					<button
-						class="pagination__button button--next"
-						type="button"
-						title="다음 페이지로 이동"
-					>
-						<img
-							src="./../assets/images/button-next.svg"
-							width="16"
-							height="16"
-							alt=""
-						/>
-					</button>
-				</div>
-			</div>
-			<!-- 홍보영상 -->
-			<div
-				role="tabpanel"
-				id="tabpanel-ad"
-				tabindex="0"
-				aria-labelledby="tab-ad"
-				class="ad hidden"
-			>
-				<header class="tabpanel__header">
-					<h3 class="tabpanel__title">
-						<img
-							src="./../assets/images/icon-news-headline.svg"
-							aria-hidden="true"
-						/>홍보영상
-					</h3>
-					<span class="tabpanel__subtitle">홍보영상 내역입니다</span>
-				</header>
-			</div>
+        <div class="pagination">
+          <ol class="pagination__list">
+            <li class="pagination__item">
+              <a href="/" class="pagination__link">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="/" class="pagination__link">2</a>
+            </li>
+            <li class="pagination__item">
+              <a href="/" class="pagination__link">3</a>
+            </li>
+            <li class="pagination__item">
+              <a href="/" class="pagination__link">4</a>
+            </li>
+            <li class="pagination__item">
+              <a href="/" class="pagination__link">5</a>
+            </li>
+          </ol>
+          <button class="pagination__button__prev" type="button" title="이전 페이지로 이동">
+            <img src="./../assets/images/button-prev.svg" alt="" />
+          </button>
+          <button class="pagination__button__next" type="button" title="다음 페이지로 이동">
+            <img src="./../assets/images/button-next.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- 홍보영상 -->
+      <div role="tabpanel" id="tabpanel-ad" tabindex="0" aria-labelledby="tab-ad" class="ad">
+        <h3 class="tabpanel__title">
+          <img src="./../assets/images/icon-news-headline.svg" aria-hidden="true" />홍보영상
+        </h3>
+        <span>홍보영상 내역입니다</span>
+      </div>
+  
 			<!-- 수상내역 -->
 			<div
 				role="tabpanel"
