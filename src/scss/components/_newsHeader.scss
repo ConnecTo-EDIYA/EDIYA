@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+@use '../utils' as *;
+
+.tabpanel__header {
+	margin-top: rem(20);
+}
+.tabpanel__title {
+	color: $primary-blue1;
+	font-weight: 700;
+	font-size: rem(20);
+}
+
+.tabpanel__subtitle {
+	font-size: rem(13);
+}

@@ -1,41 +1,69 @@
+@use './variables';
+
 // 색상 관련 mixin
 @mixin primaryFill() {
-  color: $grayscale-white;
-  background-color: $primary-blue1;
+	color: $grayscale-white;
+	background-color: $primary-blue1;
 }
 @mixin whiteFill() {
-  color: $primary-blue1;
-  background-color: $grayscale-white;
+	color: $primary-blue1;
+	background-color: $grayscale-white;
 }
 @mixin whiteOutline() {
-  color: $grayscale-white;
-  background-color: transparent;
-  border-color: $grayscale-white;
+	color: $grayscale-white;
+	background-color: transparent;
+	border-color: $grayscale-white;
 }
 @mixin grayWhiteFill() {
-  color: transparent;
-  background-color: $grayscale-white;
+	color: transparent;
+	background-color: $grayscale-white;
 }
 @mixin blackFill() {
-  background-color: $grayscale-black;
-  color: $grayscale-lightgray;
+	background-color: $grayscale-black;
+	color: $grayscale-lightgray;
 }
-
 // 위치 관련 mixin
 @mixin autoMargin {
-  margin-left: auto;
-  margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+@mixin marginX($marginX: 0) {
+	margin-left: rem($marginX);
+	margin-right: rem($marginX);
+}
+@mixin marginY($marginY: 0) {
+	margin-top: rem($marginY);
+	margin-bottom: rem($marginY);
+}
+@mixin paddingY($paddingY: 0) {
+	padding-top: rem($paddingY);
+	padding-bottom: rem($paddingY);
+}
+@mixin paddingX($paddingX: 0) {
+	padding-left: rem($paddingX);
+	padding-right: rem($paddingX);
 }
 @mixin posBottom($b: 0, $pos: absolute) {
-  position: $pos;
-  bottom: $b;
-  left: 50%;
-  transform: translateX(-50%);
+	position: $pos;
+	bottom: $b;
+	left: 50%;
+	transform: translateX(-50%);
 }
-
+@mixin flexbox($d: row, $j: space-between, $a: center, $w: nowrap) {
+	display: flex;
+	flex-direction: $d;
+	justify-content: $j;
+	align-items: $a;
+	flex-wrap: $w;
+}
+//너비 제한 후 가운데 정렬
+@mixin maxWidthCenter($mw) {
+	max-width: rem($mw);
+	@include autoMargin;
+}
 // 말줄임 mixin
 @mixin textEllipis {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
