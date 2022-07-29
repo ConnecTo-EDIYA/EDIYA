@@ -211,6 +211,7 @@
 /*수상 내역*/
 // 배경과 중앙정렬
 .tabpanel__content {
+	margin-top: rem(20);
   background: $grayscale-snow;
   & .awardYears__list {
     @include maxWidthCenter(740px);
