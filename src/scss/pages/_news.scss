@@ -1,16 +1,17 @@
 @use "../abstracts/" as *;
 @use "../utils/" as *;
 @use "../base/" as *;
+
 /*수상 내역*/
 // 배경과 중앙정렬
 .tabpanel__content {
   background: $grayscale-snow;
   & .awardYears__list {
-    max-width: 740px;
+    max-width: rem(740px);
     // 중앙정렬
     margin-left: auto;
     margin-right: auto;
-    padding: 45px 20px 60px 20px;
+    padding: rem(45px) rem(20px) rem(60px) rem(20px);
   }
 }
 
@@ -27,23 +28,23 @@ details > summary::-webkit-details-marker {
   display: flex;
   & .awardYears__title { /*2019*/
     position: relative;
-    padding-right: 17px;
-    border-right: 1px solid $secondary-violet3;
+    padding-right: rem(17px);
+    border-right: rem(1px) solid $secondary-violet3;
   
   
     font-weight: 700;
-    font-size: 20px;
-    color: #24388D;
+    font-size: rem(20px);
+    color: $primary-blue1;
     &::after {
       content: '';
-      width: 5px;
-      height: 5px;
-      border-radius: 4px;
+      width: rem(5px);
+      height: rem(5px);
+      border-radius: rem(4px);
       position: absolute;
-      top: -5px;
+      top: rem(-5px);
       right: 0;
       transform: translateX(60%);
-      background-color: #24388d;
+      background-color: $primary-blue1;
     }
   }
 
@@ -54,13 +55,13 @@ details > summary::-webkit-details-marker {
 
 .awardDetail__item {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   
 }
 
 .awardDetail__article__content {
   width: 100%;
-  padding: 15px 40px 0 25px;
+  padding: rem(15px) rem(40px) 0 rem(25px);
 }
 
 
@@ -71,25 +72,28 @@ details > summary::-webkit-details-marker {
   justify-content: space-between;
   width: 100%;
   font-weight: 700;
-  font-size: 13px;
+  font-size: rem(13px);
   line-height: 130%;
   letter-spacing: -0.02em;
-  padding: 5px;
+  padding: rem(5px);
+  h5 {
+    width: 92%;
+  }
   time {
-    font-size: 12px;
+    font-size: rem(12px);
     font-weight: 400;
-    color: #0F0F0F;
-    line-height: 12px;
+    color: $grayscale-black;
+    line-height: rem(12px);
     letter-spacing: -0.04em;
-    margin-right: 10px;
+    margin-right: rem(10px);
   }
   &::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 24px;
-    height: 24px;
+    width: rem(24px);
+    height: rem(24px);
     background: url(../../assets/images/icon-arrow-down.svg);
   }
 }
@@ -101,45 +105,45 @@ details > summary::-webkit-details-marker {
 
 
 .listItem__thumbnail {
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 }
 .listItem__description {
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 
 
   font-family: 'SpoqaHanSans';
   font-weight: 400;
-  font-size: 12px;
+  font-size: rem(12px);
   letter-spacing: -0.02em;
 
-  color: #0F0F0F;
+  color: $grayscale-black;
 }
 .awardDetail__dateBox {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: rem(5px);
   dt {
-    padding: 3px 6px;
-    background: #24388D;
-    border-radius: 25px;
+    padding: rem(3px) rem(6px);
+    background: $primary-blue1;
+    border-radius: rem(25px);
 
     font-family: 'SpoqaHanSans';
     font-weight: 700;
-    font-size: 11px;
+    font-size: rem(11px);
     line-height: 130%;
     letter-spacing: -0.02em;
-    color: #C8CDE2;
+    color: $primary-blue4;
 
     text-align: center;
-    line-height: 15.6px;
+    line-height: rem(15.6px);
   }
   dd {
 
     font-family: 'SpoqaHanSans';
     font-weight: 700;
-    font-size: 11px;
+    font-size: rem(11px);
 
     letter-spacing: -0.02em;
-    color: #5B6AA9;
+    color: $primary-blue2;
   }
 }
