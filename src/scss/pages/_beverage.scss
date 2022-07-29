@@ -1,0 +1,64 @@
+@use "./../utils/" as *;
+@use "./../abstracts" as *;
+
+.menu__list {
+  @include desktop {
+    max-width: rem(900px);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+  }
+}
+
+.menu__item {
+  @include desktop {
+    width: 44%;
+  }
+  margin: 20px;
+  position: relative;
+
+  $menu-list: "iced-cherry-blossoms-latte", "hot-cherry-blossoms-latte", "iced-brownie-chocolate",
+    "hot-brownie-chocolate", "jeju-green-tangerine-tea", "jeju-green-tangerine-blossom",
+    "pomegranate-tea", "pomegranate-apple-lime";
+
+  @each $menu in $menu-list {
+    .#{$menu} {
+      background: $grayscale-snow url("./../../assets/images/#{$menu}.png") no-repeat center;
+      background-size: rem(240px);
+    }
+  }
+
+  &--front,
+  &--back {
+    display: block;
+    width: 100%;
+    min-width: rem(320px);
+    height: rem(373px);
+    border: none;
+  }
+
+  &--front {
+    padding-top: rem(313px);
+    transition: background-size 300ms;
+
+    &:hover {
+      background-size: rem(280px);
+    }
+  }
+
+  &--back {
+    display: none;
+    position: absolute;
+    top: 0;
+    opacity: 0%;
+    border: solid 1px $grayscale-lightgray;
+    transition: opacity 500ms;
+  }
+
+  &--back.clicked {
+    display: block;
+    opacity: 100%;
+  }
+}

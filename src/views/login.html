@@ -19,6 +19,7 @@
         <span>본문 바로가기</span>
       </a>
     </div>
+
     <header>
       <h1 class="logo">
         <a href="./../index.html" class="logo__link"
@@ -69,40 +70,49 @@
       <form action="" method="POST" class="loginForm">
         <fieldset>
           <legend>로그인 폼</legend>
-          <label for="emailInput" class="loginForm__label emailInput__label">이메일</label>
-          <input
-            id="emailInput"
-            type="email"
-            required
-            placeholder="야무@euid.dev"
-            name="email"
-            class="loginForm__input emailInput__input"
-          />
-          <img src="../assets/images/icon-warning.svg" alt="" class="invalidWarning" />
-          <p class="invalidWarning">이메일 입력 방법이 잘못되었습니다. (예: user@domain.io)</p>
 
-          <label for="passwordInput" class="loginForm__label passwordInput__label">패스워드</label>
-          <input
-            id="passwordInput"
-            type="password"
-            required
-            name="password"
-            class="loginForm__input passwordInput__input"
-          />
-          <button><img src="../assets/images/icon-visible.svg" alt="비밀번호 보기" /></button>
-          <img src="../assets/images/icon-warning.svg" alt="" class="invalidWarning" />
-          <p class="invalidWarning">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</p>
+          <div class="loginForm__section emailInput">
+            <label for="emailInput" class="loginForm__label emailInput__label">이메일</label>
+            <input
+              id="emailInput"
+              type="email"
+              required
+              placeholder="야무@euid.dev"
+              name="email"
+              class="loginForm__input emailInput__input"
+            />
+            <img src="../assets/images/icon-warning.svg" alt="" class="invalidWarning" />
+            <p class="invalidWarning">이메일 입력 방법이 잘못되었습니다. (예: user@domain.io)</p>
+          </div>
 
-          <input
-            id="saveEmailOption"
-            type="checkbox"
-            name="saveEmailOption"
-            class="emailOption__input"
-          />
-          <label for="saveEmailOption" class="emailOption__label">이메일 저장</label>
+          <div class="loginForm__section passwordInput">
+            <label for="passwordInput" class="loginForm__label passwordInput__label"
+              >패스워드</label
+            >
+            <input
+              id="passwordInput"
+              type="password"
+              required
+              name="password"
+              class="loginForm__input passwordInput__input"
+            />
+            <button><img src="../assets/images/icon-visible.svg" alt="비밀번호 보기" /></button>
+            <img src="../assets/images/icon-warning.svg" alt="" class="invalidWarning" />
+            <p class="invalidWarning">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</p>
+          </div>
 
-          <button type="submit" class="button--fill">로그인</button>
-          <a href="./signup.html" class="button--empty">회원가입</a>
+          <div class="loginForm__section emailOption">
+            <input
+              id="saveEmailOption"
+              type="checkbox"
+              name="saveEmailOption"
+              class="emailOption__input"
+            />
+            <label for="saveEmailOption" class="emailOption__label">이메일 저장</label>
+
+            <button type="submit" class="button--fill">로그인</button>
+            <a href="./signup.html" class="button--empty">회원가입</a>
+          </div>
         </fieldset>
       </form>
     </main>
