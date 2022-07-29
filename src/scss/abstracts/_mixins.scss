@@ -1,3 +1,5 @@
+@use "./variables" as *;
+@use "./../utils" as *;
 // 색상 관련 mixin
 @mixin primaryFill() {
   color: $grayscale-white;
@@ -20,11 +22,26 @@
   background-color: $grayscale-black;
   color: $grayscale-lightgray;
 }
-
 // 위치 관련 mixin
 @mixin autoMargin {
   margin-left: auto;
   margin-right: auto;
+}
+@mixin marginX($marginX: 0){
+  margin-left: rem($marginX);
+  margin-right: rem($marginX);
+}
+@mixin marginY($marginY: 0){
+  margin-top: rem($marginY);
+  margin-bottom: rem($marginY);
+}
+@mixin paddingY($paddingY: 0) {
+  padding-top: rem($paddingY);
+  padding-bottom: rem($paddingY);
+}
+@mixin paddingX($paddingX: 0) {
+  padding-left: rem($paddingX);
+  padding-right: rem($paddingX);
 }
 @mixin posBottom($b: 0, $pos: absolute) {
   position: $pos;
@@ -32,10 +49,31 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
+@mixin posTop($t: 0, $r: 0, $tr: -50%, $pos: absolute) {
+  position: $pos;
+  top: $t;
+  right: $r;
+  transform: translateX($tr);
+}
+@mixin flexbox($d: row, $j: space-between, $a: center , $w: nowrap) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: $j;
+  align-items: $a;
+  flex-wrap: $w;
+}
+//너비 제한 후 가운데 정렬
+@mixin maxWidthCenter($mw) {
+  max-width: rem($mw);
+  @include autoMargin;
+}
 // 말줄임 mixin
 @mixin textEllipis {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+@mixin squareBox($w: 0, $h: 0) {
+  width: $w;
+  height: $h;
 }

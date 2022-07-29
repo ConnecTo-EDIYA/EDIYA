@@ -202,6 +202,14 @@ summary:focus-visible {
   box-shadow: 0 0 0 4px rgba(40, 70, 204, 0.9);
 }
 
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 /*수상 내역*/
 .tabpanel__content {
   background: #f5f5f5;
@@ -213,16 +221,12 @@ summary:focus-visible {
   padding: 2.8125rem 1.25rem 3.75rem 1.25rem;
 }
 
-details > summary {
-  list-style: none;
-}
-
-details > summary::-webkit-details-marker {
-  display: none;
-}
-
 .awardYears__item {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
 }
 .awardYears__item .awardYears__title { /*2019*/
   position: relative;
@@ -260,8 +264,11 @@ details > summary::-webkit-details-marker {
 .listItem__title {
   position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-grow: 1;
   font-weight: 700;
   font-size: 0.8125rem;
   line-height: 130%;
@@ -284,6 +291,7 @@ details > summary::-webkit-details-marker {
   position: absolute;
   top: 0;
   right: 0;
+  transform: translateX(0);
   width: 1.5rem;
   height: 1.5rem;
   background: url(../../assets/images/icon-arrow-down.svg);
@@ -308,7 +316,10 @@ details > summary::-webkit-details-marker {
 
 .awardDetail__dateBox {
   display: flex;
+  flex-direction: row;
+  justify-content: initial;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 0.3125rem;
 }
 .awardDetail__dateBox dt {
