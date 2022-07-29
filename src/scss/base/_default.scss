@@ -25,18 +25,19 @@ button {
 .hidden {
 	display: none;
 }
+
 a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 button:focus-visible,
 summary:focus-visible {
-	outline: none;
-	border-radius: 2px;
-	box-shadow: 0 0 0 4px rgb(40 70 204 / 90%);
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 4px rgb(40 70 204 / 90%);
 }
 details > summary {
-	list-style: none;
+  list-style: none;
 }
 details > summary::-webkit-details-marker {
-	display: none;
+  display: none;
 }

@@ -1,5 +1,6 @@
 @use '../abstracts' as *;
 @use '../utils' as *;
+@use "../base/" as *;
 
 //탭 패널 버튼
 
@@ -205,4 +206,133 @@
 	&__button.button--prev {
 		order: -1;
 	}
+}
+
+/*수상 내역*/
+// 배경과 중앙정렬
+.tabpanel__content {
+  background: $grayscale-snow;
+  & .awardYears__list {
+    @include maxWidthCenter(740px);
+    padding: rem(45px) rem(20px) rem(60px) rem(20px);
+  }
+}
+
+
+// 연도하고 컨텐츠 가로 배치 / 선, 점 스타일
+// 플렉스로 정렬하고 
+.awardYears__item { 
+  @include flexbox($a: stretch);
+  & .awardYears__title { /*2019*/
+    position: relative;
+    padding-right: rem(17px);
+    border-right: rem(1px) solid $secondary-violet3;
+    font-weight: 700;
+    font-size: rem(20px);
+    color: $primary-blue1;
+    &::after {
+      content: '';
+      width: rem(5px);
+      height: rem(5px);
+      border-radius: rem(4px);
+      @include posTop($t: rem(-5px), $tr: 60%);
+      background-color: $primary-blue1;
+    }
+  }
+
+  & .awardDetail__list {
+    width: 100%;
+  }
+}
+
+.awardDetail__item {
+  width: 100%;
+  margin-bottom: rem(20px);
+}
+
+.awardDetail__article__content {
+  width: 100%;
+  padding: rem(15px) rem(40px) 0 rem(25px);
+}
+
+
+
+.listItem__title {
+  position: relative;
+  @include flexbox;
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: rem(13px);
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  padding: rem(5px);
+  h5 {
+    width: 92%;
+  }
+  time {
+    font-size: rem(12px);
+    font-weight: 400;
+    color: $grayscale-black;
+    line-height: rem(12px);
+    letter-spacing: -0.04em;
+    margin-right: rem(10px);
+  }
+  &::after {
+    content: '';
+    @include posTop($tr: 0, $pos: absolute);
+    @include squareBox($w: rem(24px), $h: rem(24px));
+    // width: rem(24px);
+    // height: rem(24px);
+    background: url(../../assets/images/icon-arrow-down.svg);
+  }
+}
+
+// 열린 디테일
+.awardDetail__article details[open] .listItem__title::after{
+  background: url(../../assets/images/icon-arrow-up.svg);
+}
+
+
+.listItem__thumbnail {
+  margin-bottom: rem(10px);
+}
+.listItem__description {
+  margin-bottom: rem(10px);
+
+
+  font-family: 'SpoqaHanSans';
+  font-weight: 400;
+  font-size: rem(12px);
+  letter-spacing: -0.02em;
+
+  color: $grayscale-black;
+}
+.awardDetail__dateBox {
+  @include flexbox($j: initial);
+  // display: flex;
+  // align-items: center;
+  gap: rem(5px);
+  dt {
+    padding: rem(3px) rem(6px);
+    background: $primary-blue1;
+    border-radius: rem(25px);
+
+    font-family: 'SpoqaHanSans';
+    font-weight: 700;
+    font-size: rem(11px);
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: $primary-blue4;
+
+    text-align: center;
+    line-height: rem(15.6px);
+  }
+  dd {
+    font-family: 'SpoqaHanSans';
+    font-weight: 700;
+    font-size: rem(11px);
+
+    letter-spacing: -0.02em;
+    color: $primary-blue2;
+  }
 }
