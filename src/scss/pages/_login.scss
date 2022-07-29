@@ -1,0 +1,79 @@
+@use "./../abstracts/" as *;
+@use "./../utils" as *;
+
+.login {
+  color: $grayscale-white;
+
+  @include mobile {
+    background: $grayscale-white url("./../../assets/images/coffee-mobile.jpg") no-repeat center;
+  }
+
+  @include desktop {
+    background: $grayscale-white url("./../../assets/images/coffee-desktop.jpg") no-repeat center;
+  }
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.title {
+  font-size: $text-size10;
+  font-weight: 300;
+  padding-top: rem(70px);
+  padding-bottom: rem(24px);
+}
+
+.description {
+  &--en {
+    display: block;
+    font-size: $text-size7;
+  }
+  &--ko {
+    display: block;
+    font-size: $text-size2;
+  }
+  margin-bottom: rem(114px);
+}
+
+.loginForm {
+  width: 85%;
+  @include autoMargin;
+
+  &__section {
+    position: relative;
+
+    .loginForm__label {
+      position: absolute;
+      top: rem(22px);
+      left: rem(8px);
+      font-size: $text-size7;
+      transition: all 0.3s;
+    }
+
+    &:focus-within .loginForm__label {
+      top: 0;
+      left: 0;
+      font-size: $text-size3;
+    }
+  }
+
+  &__input {
+    padding: rem(24px) rem(8px) rem(8px) rem(8px);
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $grayscale-white;
+    width: 100%;
+    color: $grayscale-white;
+
+    &::placeholder {
+      font-size: $text-size6;
+      color: transparent;
+    }
+
+    &:focus::placeholder {
+      color: rgba($color: $grayscale-white, $alpha: 0.7);
+    }
+  }
+}
