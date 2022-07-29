@@ -1,0 +1,46 @@
+@use "./../utils" as *;
+@use "./../components" as *;
+@use "./../abstracts" as *;
+
+.header{
+  @include flexbox();
+
+  @include mobile {
+    position: relative;
+    background: $grayscale-white;
+    .navigation {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    position: relative;
+    &__button {
+      display: none;
+    }
+  }
+
+  &__button {
+    width: rem(50px);
+    height: rem(50px);
+    &:hover, &:focus{
+      background: $grayscale-snow;
+    }
+  }
+
+  .logo {
+    @include marginY(rem(18px));
+    margin-left: rem(18px);
+  
+    img {
+      width: rem(140px);
+      height: rem(14px);
+    }
+  }
+
+  .navigation {
+    @include flexbox();
+  }
+
+}
+

@@ -6,30 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>이디야 커피(EDIYA COFFEE)</title>
     <meta name="description" content="Always Beside you. 이디야커피 홈페이지입니다." />
-    <link
-      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
-      rel="stylesheet"
-      type="text/css"
-    />
     <link rel="stylesheet" href="./style/index.css" />
   </head>
 
   <body>
     <div class="skipNav">
-      <a href="#main" class="skipNav">
+      <a href="#" class="skipNav">
         <span>본문 바로가기</span>
       </a>
     </div>
-    <header>
+    <header class="header">
       <h1 class="logo">
         <a href="/" class="logo__link"
           ><img src="./assets/images/brand.svg" alt="이디야 커피 로고"
         /></a>
       </h1>
       <button class="header__button">
-        <span class="header__button--top"></span>
-        <span class="header__button--middle"></span>
-        <span class="header__button--bottom"></span>
+       <img src="./assets/images/button-navigation.svg" alt="네비게이션 메뉴 바" />
       </button>
       <nav class="navigation">
         <h2 class="sr-only">메인 메뉴바</h2>
@@ -38,7 +31,7 @@
             <a class="navigation__link" href="./views/login.html">로그인</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="./views/">회원가입</a>
+            <a class="navigation-link" href="./views/signup.html">회원가입</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="/">이디야 디자인</a>
@@ -58,7 +51,7 @@
         </button>
       </nav>
     </header>
-    <main id="main">
+    <main>
       <article class="main__ediyamenu">
         <h2 class="sr-only">이디야의 다양한 메뉴 소개</h2>
         <p class="main__catchphrase">ALWAYS BESIDE YOU <span>EDITA COFFEE</span></p>
@@ -122,7 +115,6 @@
         <img src="./assets/images/icon-arrow-darkblue.svg" alt="" />
       </button>
     </main>
-
     <footer>
       <ul class="guide__list">
         <li><a href="/" class="guide__link">개인정보처리방침</a></li>
