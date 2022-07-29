@@ -1,152 +1,193 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>회원 가입 - 이디야 커피</title>
-    <link
-      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="./../style/index.css" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>회원 가입 - 이디야 커피</title>
+		<link
+			href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="./../style/index.css" />
+	</head>
 
-  <body>
-    <div class="videoControlModal">
-      <p>ESC 키를 누르면 비디오를 일시정지 하거나, 다시 재생할 수 있습니다.</p>
-      <button>확인</button>
-    </div>
+	<body>
+		<div class="videoControlModal">
+			<p>ESC 키를 누르면 비디오를 일시정지 하거나, 다시 재생할 수 있습니다.</p>
+			<button>확인</button>
+		</div>
 
-    <div class="skipNav">
-      <a href="#main" class="skipNav">
-        <span>본문 바로가기</span>
-      </a>
-    </div>
-    <header>
-      <h1 class="logo">
-        <a href="./../index.html" class="logo__link"
-          ><img src="./../assets/images/brand.svg" alt="이디야 커피 로고"
-        /></a>
-      </h1>
-      <button class="header__button">
-        <span class="header__button--top"></span>
-        <span class="header__button--middle"></span>
-        <span class="header__button--bottom"></span>
-      </button>
-      <nav class="navigation">
-        <h2 class="sr-only">메인 메뉴바</h2>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="./login.html">로그인</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="./signup.html">회원가입</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="/">이디야 디자인</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="/">이디야 음료</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./news.html">이디야 뉴스</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./store.html">매장 찾기</a>
-          </li>
-        </ul>
-        <button type="button" aria-label="메뉴 닫기">
-          <img src="./assets/images/button-detail-close.svg" alt="" />
-        </button>
-      </nav>
-    </header>
+		<div class="skipNav">
+			<a href="#main" class="skipNav">
+				<span>본문 바로가기</span>
+			</a>
+		</div>
+		<header>
+			<h1 class="logo">
+				<a href="./../../index.html" class="logo__link"
+					><img src="./../assets/images/brand.svg" alt="이디야 커피 로고"
+				/></a>
+			</h1>
+			<button class="header__button">
+				<span class="header__button--top"></span>
+				<span class="header__button--middle"></span>
+				<span class="header__button--bottom"></span>
+			</button>
+			<nav class="navigation">
+				<h2 class="sr-only">메인 메뉴바</h2>
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a class="navigation__link" href="./login.html">로그인</a>
+					</li>
+					<li class="navigation-item">
+						<a class="navigation-link" href="./signup.html">회원가입</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="/">이디야 디자인</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="/">이디야 음료</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="./news.html">이디야 뉴스</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="./store.html">매장 찾기</a>
+					</li>
+				</ul>
+				<button type="button" aria-label="메뉴 닫기">
+					<img src="./assets/images/button-detail-close.svg" alt="" />
+				</button>
+			</nav>
+		</header>
 
-    <main id="main">
-      <h2 class="title">회원가입</h2>
+		<main id="main">
+			<h2 class="title">회원가입</h2>
 
-      <p class="description">
-        <span lang="en" class="description--en">Join Us, Ediya Coffee</span>
-        <span class="description--ko">이디야멤버스 가입을 진행합니다.</span>
-      </p>
+			<p class="description">
+				<span lang="en" class="description--en">Join Us, Ediya Coffee</span>
+				<span class="description--ko">이디야멤버스 가입을 진행합니다.</span>
+			</p>
 
-      <form action="" method="POST" class="signupForm">
-        <fieldset>
-          <legend>회원가입 폼</legend>
-          <label for="emailInput" class="signupForm__label emailInput__label">이메일</label>
-          <input
-            id="emailInput"
-            type="email"
-            required
-            placeholder="야무@euid.dev"
-            name="email"
-            class="signupForm__input emailInput__input"
-          />
-          <img src="../assets/images/icon-warning.svg" alt="" class="invalidWarning" />
-          <p class="invalidWarning">이메일 입력 방법이 잘못되었습니다. (예: user@domain.io)</p>
+			<form action="" method="POST" class="signupForm">
+				<fieldset>
+					<legend>회원가입 폼</legend>
+					<label for="emailInput" class="signupForm__label emailInput__label"
+						>이메일</label
+					>
+					<input
+						id="emailInput"
+						type="email"
+						required
+						placeholder="야무@euid.dev"
+						name="email"
+						class="signupForm__input emailInput__input"
+					/>
+					<img
+						src="../assets/images/icon-warning.svg"
+						alt=""
+						class="invalidWarning"
+					/>
+					<p class="invalidWarning">
+						이메일 입력 방법이 잘못되었습니다. (예: user@domain.io)
+					</p>
 
-          <label for="passwordInput" class="signupForm__label passwordInput__label">패스워드</label>
-          <input
-            id="passwordInput"
-            type="password"
-            required
-            name="password"
-            class="signupForm__input passwordInput__input"
-          />
-          <button><img src="../assets/images/icon-visible.svg" alt="비밀번호 보기" /></button>
-          <img src="../assets/images/icon-warning.svg" alt="" class="invalidWarning" />
-          <p class="invalidWarning">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</p>
+					<label
+						for="passwordInput"
+						class="signupForm__label passwordInput__label"
+						>패스워드</label
+					>
+					<input
+						id="passwordInput"
+						type="password"
+						required
+						name="password"
+						class="signupForm__input passwordInput__input"
+					/>
+					<button>
+						<img src="../assets/images/icon-visible.svg" alt="비밀번호 보기" />
+					</button>
+					<img
+						src="../assets/images/icon-warning.svg"
+						alt=""
+						class="invalidWarning"
+					/>
+					<p class="invalidWarning">
+						패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.
+					</p>
 
-          <label for="passwordCheckInput" class="signupForm__label passwordCheckInput__label"
-            >패스워드 확인</label
-          >
-          <input
-            id="passwordCheckInput"
-            type="password"
-            required
-            name="password"
-            class="signupForm__label passwordCheckInput__input"
-          />
-          <button><img src="../assets/images/icon-visible.svg" alt="비밀번호 보기" /></button>
-          <img src="../assets/images/icon-warning.svg" alt="" class="invalidWarning" />
-          <p class="invalidWarning">패스워드가 일치하지 않습니다.</p>
+					<label
+						for="passwordCheckInput"
+						class="signupForm__label passwordCheckInput__label"
+						>패스워드 확인</label
+					>
+					<input
+						id="passwordCheckInput"
+						type="password"
+						required
+						name="password"
+						class="signupForm__label passwordCheckInput__input"
+					/>
+					<button>
+						<img src="../assets/images/icon-visible.svg" alt="비밀번호 보기" />
+					</button>
+					<img
+						src="../assets/images/icon-warning.svg"
+						alt=""
+						class="invalidWarning"
+					/>
+					<p class="invalidWarning">패스워드가 일치하지 않습니다.</p>
 
-          <button type="submit" class="button--fill">가입하기</button>
-          <a href="./login.html" class="button--empty">로그인</a>
-        </fieldset>
-      </form>
-    </main>
+					<button type="submit" class="button--fill">가입하기</button>
+					<a href="./login.html" class="button--empty">로그인</a>
+				</fieldset>
+			</form>
+		</main>
 
-    <footer>
-      <ul class="guide__list">
-        <li><a href="/" class="guide__link">개인정보처리방침</a></li>
-        <li><a href="/" class="guide__link">멤버스 이용약관</a></li>
-        <li><a href="/" class="guide__link">가맹 안내</a></li>
-        <li><a href="/" class="guide__link">대량쿠폰구매</a></li>
-        <li><a href="/" class="guide__link">채용안내</a></li>
-        <li><a href="/" class="guide__link">고객의 소리</a></li>
-        <li><a href="/" class="guide__link">사이트맵</a></li>
-        <li><a href="/" class="guide__link">점주의 방</a></li>
-      </ul>
-      <img src="./../assets/images/brand-dark.svg" alt="이디야 커피 로고" />
-      <address class="address">
-        <ul>
-          <li>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</li>
-          <li>
-            <span>TEL</span><span aria-hidden="true"> : </span
-            ><a href="tel:02-543-6467">02-543-6467</a>
-          </li>
-          <li>
-            <span>FAX</span><span aria-hidden="true"> : </span
-            ><a href="tel:02-543-7191">02-543-7191</a>
-          </li>
-          <li><span>사업자등록번호</span><span aria-hidden="true"> : </span>107-86-1630</li>
-          <li><span>통신판매업 신고</span><span aria-hidden="true"> : </span>강남 제 002519호</li>
-          <li><span>대표이사</span><span aria-hidden="true"> : </span>문창기</li>
-        </ul>
-      </address>
-      <small class="copyright">&copy; 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</small>
-    </footer>
-  </body>
+		<footer>
+			<ul class="guide__list">
+				<li><a href="/" class="guide__link">개인정보처리방침</a></li>
+				<li><a href="/" class="guide__link">멤버스 이용약관</a></li>
+				<li><a href="/" class="guide__link">가맹 안내</a></li>
+				<li><a href="/" class="guide__link">대량쿠폰구매</a></li>
+				<li><a href="/" class="guide__link">채용안내</a></li>
+				<li><a href="/" class="guide__link">고객의 소리</a></li>
+				<li><a href="/" class="guide__link">사이트맵</a></li>
+				<li><a href="/" class="guide__link">점주의 방</a></li>
+			</ul>
+			<img src="./../assets/images/brand-dark.svg" alt="이디야 커피 로고" />
+			<address class="address">
+				<ul>
+					<li>
+						서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동
+						221-17)
+					</li>
+					<li>
+						<span>TEL</span><span aria-hidden="true"> : </span
+						><a href="tel:02-543-6467">02-543-6467</a>
+					</li>
+					<li>
+						<span>FAX</span><span aria-hidden="true"> : </span
+						><a href="tel:02-543-7191">02-543-7191</a>
+					</li>
+					<li>
+						<span>사업자등록번호</span
+						><span aria-hidden="true"> : </span>107-86-1630
+					</li>
+					<li>
+						<span>통신판매업 신고</span><span aria-hidden="true"> : </span>강남
+						제 002519호
+					</li>
+					<li>
+						<span>대표이사</span><span aria-hidden="true"> : </span>문창기
+					</li>
+				</ul>
+			</address>
+			<small class="copyright"
+				>&copy; 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</small
+			>
+		</footer>
+	</body>
 </html>

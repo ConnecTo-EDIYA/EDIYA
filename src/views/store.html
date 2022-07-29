@@ -1,159 +1,179 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>매장 찾기 - 이디야 커피</title>
-    <link
-      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="./../style/index.css" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>매장 찾기 - 이디야 커피</title>
+		<link
+			href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="./../style/index.css" />
+	</head>
 
-  <body>
-    <div class="skipNav">
-      <a href="#main" class="skipNav">
-        <span>본문 바로가기</span>
-      </a>
-    </div>
-    <header>
-      <h1 class="logo">
-        <a href="./../index.html" class="logo__link"
-          ><img src="./../assets/images/brand.svg" alt="이디야 커피 로고"
-        /></a>
-      </h1>
-      <button class="header__button">
-        <span class="header__button--top"></span>
-        <span class="header__button--middle"></span>
-        <span class="header__button--bottom"></span>
-      </button>
-      <nav class="navigation">
-        <h2 class="sr-only">메인 메뉴바</h2>
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="./login.html">로그인</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="./signup.html">회원가입</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="/">이디야 디자인</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="/">이디야 음료</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./news.html">이디야 뉴스</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="./store.html">매장 찾기</a>
-          </li>
-        </ul>
-        <button type="button" aria-label="메뉴 닫기">
-          <img src="./assets/images/button-detail-close.svg" alt="" />
-        </button>
-      </nav>
-    </header>
+	<body>
+		<div class="skipNav">
+			<a href="#main" class="skipNav">
+				<span>본문 바로가기</span>
+			</a>
+		</div>
+		<header>
+			<h1 class="logo">
+				<a href="./../../index.html" class="logo__link"
+					><img src="./../assets/images/brand.svg" alt="이디야 커피 로고"
+				/></a>
+			</h1>
+			<button class="header__button">
+				<span class="header__button--top"></span>
+				<span class="header__button--middle"></span>
+				<span class="header__button--bottom"></span>
+			</button>
+			<nav class="navigation">
+				<h2 class="sr-only">메인 메뉴바</h2>
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a class="navigation__link" href="./login.html">로그인</a>
+					</li>
+					<li class="navigation-item">
+						<a class="navigation-link" href="./signup.html">회원가입</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="/">이디야 디자인</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="/">이디야 음료</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="./news.html">이디야 뉴스</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="./store.html">매장 찾기</a>
+					</li>
+				</ul>
+				<button type="button" aria-label="메뉴 닫기">
+					<img src="./assets/images/button-detail-close.svg" alt="" />
+				</button>
+			</nav>
+		</header>
 
-    <main class="store" id="main">
-      <h2 class="sr-only">매장 찾기</h2>
-      <div class="searchSection">
-        <ul class="searchOption">
-          <li>
-            <button class="searchOption__button">점포명</button>
-          </li>
-          <li>
-            <button class="searchOption__button">주소</button>
-          </li>
-        </ul>
-        <form action="/" class="search__form">
-          <fieldset>
-            <legend>매장 검색 영역</legend>
-            <div class="search__box">
-              <label class="sr-only" for="search__input">검색</label>
-              <input type="search" id="search__input" placeholder="검색어 입력(예: 길음)" />
-              <button type="submit" class="search__button">
-                <img src="icon-search.svg" alt="검색 버튼" />
-              </button>
-            </div>
-          </fieldset>
-        </form>
-        <ol class="searchResult">
-          <li class="searchResult__item">
-            <img
-              class="listItem__thumbnail"
-              src="./../assets/images/news-thumbnail.jpg"
-              alt="한 조각의 평화 밀크레이프, 수플레 치즈, 초코 티라미수, 데블스 초코"
-              width="60"
-              height="60"
-              loading="lazy"
-            />
-            <dl>
-              <dt class="listItem__title">
-                올해 추석은 커피향 가득"…이디야커피, 선물세트 5종 선봬
-              </dt>
-              <dd class="listItem__description">
-                이디야커피는 추석 명절을 맞아 인기 제품을 한데 모은 '추석 선물세트'를 출시한다고 4일
-                밝혔다.
-              </dd>
-            </dl>
-          </li>
-          <li class="searchResult__item">
-            <img
-              class="listItem__thumbnail"
-              src="./../assets/images/news-thumbnail.jpg"
-              alt="한 조각의 평화 밀크레이프, 수플레 치즈, 초코 티라미수, 데블스 초코"
-              width="60"
-              height="60"
-              loading="lazy"
-            />
-            <dl>
-              <dt class="listItem__title">
-                올해 추석은 커피향 가득"…이디야커피, 선물세트 5종 선봬
-              </dt>
-              <dd class="listItem__description">
-                이디야커피는 추석 명절을 맞아 인기 제품을 한데 모은 '추석 선물세트'를 출시한다고 4일
-                밝혔다.
-              </dd>
-            </dl>
-          </li>
-        </ol>
-      </div>
-      <img src="./../assets/media/coffee-latte-art-cover.png" alt="지도 대신 넣은 이미지" />
-    </main>
+		<main class="store" id="main">
+			<h2 class="sr-only">매장 찾기</h2>
+			<div class="searchSection">
+				<ul class="searchOption">
+					<li>
+						<button class="searchOption__button">점포명</button>
+					</li>
+					<li>
+						<button class="searchOption__button">주소</button>
+					</li>
+				</ul>
+				<form action="/" class="search__form">
+					<fieldset>
+						<legend>매장 검색 영역</legend>
+						<div class="search__box">
+							<label class="sr-only" for="search__input">검색</label>
+							<input
+								type="search"
+								id="search__input"
+								placeholder="검색어 입력(예: 길음)"
+							/>
+							<button type="submit" class="search__button">
+								<img src="icon-search.svg" alt="검색 버튼" />
+							</button>
+						</div>
+					</fieldset>
+				</form>
+				<ol class="searchResult">
+					<li class="searchResult__item">
+						<img
+							class="listItem__thumbnail"
+							src="./../assets/images/news-thumbnail.jpg"
+							alt="한 조각의 평화 밀크레이프, 수플레 치즈, 초코 티라미수, 데블스 초코"
+							width="60"
+							height="60"
+							loading="lazy"
+						/>
+						<dl>
+							<dt class="listItem__title">
+								올해 추석은 커피향 가득"…이디야커피, 선물세트 5종 선봬
+							</dt>
+							<dd class="listItem__description">
+								이디야커피는 추석 명절을 맞아 인기 제품을 한데 모은 '추석
+								선물세트'를 출시한다고 4일 밝혔다.
+							</dd>
+						</dl>
+					</li>
+					<li class="searchResult__item">
+						<img
+							class="listItem__thumbnail"
+							src="./../assets/images/news-thumbnail.jpg"
+							alt="한 조각의 평화 밀크레이프, 수플레 치즈, 초코 티라미수, 데블스 초코"
+							width="60"
+							height="60"
+							loading="lazy"
+						/>
+						<dl>
+							<dt class="listItem__title">
+								올해 추석은 커피향 가득"…이디야커피, 선물세트 5종 선봬
+							</dt>
+							<dd class="listItem__description">
+								이디야커피는 추석 명절을 맞아 인기 제품을 한데 모은 '추석
+								선물세트'를 출시한다고 4일 밝혔다.
+							</dd>
+						</dl>
+					</li>
+				</ol>
+			</div>
+			<img
+				src="./../assets/media/coffee-latte-art-cover.png"
+				alt="지도 대신 넣은 이미지"
+			/>
+		</main>
 
-    <footer>
-      <ul class="guide__list">
-        <li><a href="/" class="guide__link">개인정보처리방침</a></li>
-        <li><a href="/" class="guide__link">멤버스 이용약관</a></li>
-        <li><a href="/" class="guide__link">가맹 안내</a></li>
-        <li><a href="/" class="guide__link">대량쿠폰구매</a></li>
-        <li><a href="/" class="guide__link">채용안내</a></li>
-        <li><a href="/" class="guide__link">고객의 소리</a></li>
-        <li><a href="/" class="guide__link">사이트맵</a></li>
-        <li><a href="/" class="guide__link">점주의 방</a></li>
-      </ul>
-      <img src="./../assets/images/brand-dark.svg" alt="이디야 커피 로고" />
-      <address class="address">
-        <ul>
-          <li>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</li>
-          <li>
-            <span>TEL</span><span aria-hidden="true"> : </span
-            ><a href="tel:02-543-6467">02-543-6467</a>
-          </li>
-          <li>
-            <span>FAX</span><span aria-hidden="true"> : </span
-            ><a href="tel:02-543-7191">02-543-7191</a>
-          </li>
-          <li><span>사업자등록번호</span><span aria-hidden="true"> : </span>107-86-1630</li>
-          <li><span>통신판매업 신고</span><span aria-hidden="true"> : </span>강남 제 002519호</li>
-          <li><span>대표이사</span><span aria-hidden="true"> : </span>문창기</li>
-        </ul>
-      </address>
-      <small class="copyright">&copy; 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</small>
-    </footer>
-  </body>
+		<footer>
+			<ul class="guide__list">
+				<li><a href="/" class="guide__link">개인정보처리방침</a></li>
+				<li><a href="/" class="guide__link">멤버스 이용약관</a></li>
+				<li><a href="/" class="guide__link">가맹 안내</a></li>
+				<li><a href="/" class="guide__link">대량쿠폰구매</a></li>
+				<li><a href="/" class="guide__link">채용안내</a></li>
+				<li><a href="/" class="guide__link">고객의 소리</a></li>
+				<li><a href="/" class="guide__link">사이트맵</a></li>
+				<li><a href="/" class="guide__link">점주의 방</a></li>
+			</ul>
+			<img src="./../assets/images/brand-dark.svg" alt="이디야 커피 로고" />
+			<address class="address">
+				<ul>
+					<li>
+						서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동
+						221-17)
+					</li>
+					<li>
+						<span>TEL</span><span aria-hidden="true"> : </span
+						><a href="tel:02-543-6467">02-543-6467</a>
+					</li>
+					<li>
+						<span>FAX</span><span aria-hidden="true"> : </span
+						><a href="tel:02-543-7191">02-543-7191</a>
+					</li>
+					<li>
+						<span>사업자등록번호</span
+						><span aria-hidden="true"> : </span>107-86-1630
+					</li>
+					<li>
+						<span>통신판매업 신고</span><span aria-hidden="true"> : </span>강남
+						제 002519호
+					</li>
+					<li>
+						<span>대표이사</span><span aria-hidden="true"> : </span>문창기
+					</li>
+				</ul>
+			</address>
+			<small class="copyright"
+				>&copy; 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</small
+			>
+		</footer>
+	</body>
 </html>
