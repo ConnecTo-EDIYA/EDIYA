@@ -662,6 +662,7 @@ details > summary::-webkit-details-marker {
 
 /*수상 내역*/
 .tabpanel__content {
+  margin-top: 1.25rem;
   background: #f5f5f5;
 }
 .tabpanel__content .awardYears__list {
