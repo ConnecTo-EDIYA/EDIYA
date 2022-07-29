@@ -26,6 +26,7 @@
 	font-size: rem(15);
 	height: rem(34);
 	padding: rem(4);
+	outline-offset: -rem(4);
 	border: rem(2) solid $grayscale-snow;
 
 	&.is--active {
@@ -166,10 +167,7 @@
 //페이지네이션 레이아웃 & 스타일링
 .pagination {
 	width: 100%;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
+	@include flexbox($j: center);
 	height: rem(32);
 
 	&__list {

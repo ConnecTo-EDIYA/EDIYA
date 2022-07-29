@@ -1,5 +1,5 @@
-@use './variables';
-
+@use './variables' as *;
+@use './../utils' as *;
 // 색상 관련 mixin
 @mixin primaryFill() {
 	color: $grayscale-white;
@@ -49,6 +49,12 @@
 	left: 50%;
 	transform: translateX(-50%);
 }
+@mixin posTop($t: 0, $r: 0, $tr: -50%, $pos: absolute) {
+	position: $pos;
+	top: $t;
+	right: $r;
+	transform: translateX($tr);
+}
 @mixin flexbox($d: row, $j: space-between, $a: center, $w: nowrap) {
 	display: flex;
 	flex-direction: $d;
@@ -66,4 +72,8 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+}
+@mixin squareBox($w: 0, $h: 0) {
+	width: $w;
+	height: $h;
 }
