@@ -1,6 +1,212 @@
-@use "../abstracts/" as *;
-@use "../utils/" as *;
+@use '../abstracts' as *;
+@use '../utils' as *;
 @use "../base/" as *;
+
+//탭 패널 버튼
+
+.tab__list {
+	display: flex;
+	width: 100%;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+	background-color: $grayscale-snow;
+
+	@include mobile {
+		flex-wrap: wrap;
+	}
+
+	@include desktop {
+		margin-top: rem(50);
+		margin-bottom: rem(50);
+		@include maxWidthCenter(480);
+	}
+}
+.tab {
+	@include whiteFill;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+	font-weight: 700;
+	font-size: rem(15);
+	height: rem(34);
+	padding: rem(4);
+	outline-offset: -rem(4);
+	border: rem(2) solid $grayscale-snow;
+
+	&.is--active {
+		@include primaryFill;
+	}
+
+	@include mobile {
+		width: 50%;
+		height: rem(48);
+	}
+
+	@include desktop {
+		width: 25%;
+	}
+}
+
+// 탭 패널 레이아웃 영역
+
+.press {
+	padding: rem(15);
+
+	.tabpanel__header {
+		@include maxWidthCenter(740);
+	}
+
+	.search__form {
+		@include desktop {
+			@include maxWidthCenter(740);
+		}
+	}
+
+	.searchResult {
+		@include desktop {
+			@include maxWidthCenter(740);
+		}
+	}
+
+	.pagination {
+		@include desktop {
+			@include maxWidthCenter(740);
+		}
+	}
+}
+
+//테이블 영역
+//테이블 기본 스타일 &헤더 레이아웃 및 스타일링
+.searchResult {
+	width: 100%;
+	table-layout: fixed;
+	margin-top: rem(15);
+	font-size: rem(14);
+	border-top: $border-size3 solid $primary-blue1;
+	border-bottom: $border-size3 solid $primary-blue1;
+
+	&__header {
+		font-size: rem(16);
+		font-weight: 700;
+		color: $primary-blue1;
+		height: rem(36);
+		text-align: center;
+		line-height: rem(36);
+		border-bottom: $border-size2 solid $primary-blue1;
+
+		&__order {
+			width: 10%;
+		}
+		&__description {
+			width: 65%;
+		}
+		&__date {
+			width: 25%;
+		}
+	}
+
+	&__content {
+		border-top: $border-size1 solid $primary-blue1;
+		border-bottom: $border-size1 solid $primary-blue1;
+
+		@include mobile {
+			height: rem(66);
+		}
+
+		@include desktop {
+			height: rem(90);
+		}
+
+		td {
+			padding: rem(15);
+		}
+	}
+}
+
+//테이블 콘텐츠 레이아웃 및 스타일링
+.searchResult {
+	&__order {
+		width: 10%;
+		text-align: center;
+		color: $primary-blue1;
+	}
+	&__description {
+		position: relative;
+		width: 65%;
+
+		.searchResult__item__text {
+			display: block;
+			width: 100%;
+			padding-left: rem(70);
+		}
+
+		.listItem__title,
+		.listItem__description {
+			@include textEllipis;
+		}
+		.listItem__title {
+			color: $primary-blue1;
+			font-size: rem(15);
+		}
+
+		.listItem__description {
+			color: $grayscale-lightgray;
+			font-size: rem(13);
+		}
+
+		.listItem__thumbnail {
+			position: absolute;
+			top: 50%;
+			left: rem(5);
+			transform: translateY(-50%);
+		}
+	}
+	&__date {
+		width: 25%;
+		text-align: center;
+		color: $primary-blue1;
+	}
+}
+
+//페이지네이션 레이아웃 & 스타일링
+.pagination {
+	width: 100%;
+	@include flexbox($j: center);
+	height: rem(32);
+
+	&__list {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: rem(10);
+		padding: rem(10) rem(20);
+	}
+
+	&__item &__link {
+		padding: rem(4);
+		font-size: rem(16);
+		font-weight: 700;
+		color: $primary-blue3;
+	}
+	&__item &__link:hover,
+	&__item &__link.is--active {
+		color: $primary-blue1;
+	}
+
+	&__button {
+		width: rem(16);
+		height: rem(16);
+		padding: rem(4);
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:hover img {
+			filter: brightness(0) saturate(100%) invert(15%) sepia(26%)
+				saturate(7499%) hue-rotate(225deg) brightness(96%) contrast(89%);
+		}
+	}
+
+	&__button.button--prev {
+		order: -1;
+	}
+}
 
 /*수상 내역*/
 // 배경과 중앙정렬
