@@ -1,0 +1,145 @@
+@use "../abstracts/" as *;
+@use "../utils/" as *;
+@use "../base/" as *;
+/*수상 내역*/
+// 배경과 중앙정렬
+.tabpanel__content {
+  background: $grayscale-snow;
+  & .awardYears__list {
+    max-width: 740px;
+    // 중앙정렬
+    margin-left: auto;
+    margin-right: auto;
+    padding: 45px 20px 60px 20px;
+  }
+}
+
+// 독자적인 거. 다른 곳에서도 사용할 거
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+// 연도하고 컨텐츠 가로 배치 / 선, 점 스타일
+.awardYears__item { 
+  display: flex;
+  & .awardYears__title { /*2019*/
+    position: relative;
+    padding-right: 17px;
+    border-right: 1px solid $secondary-violet3;
+  
+  
+    font-weight: 700;
+    font-size: 20px;
+    color: #24388D;
+    &::after {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 4px;
+      position: absolute;
+      top: -5px;
+      right: 0;
+      transform: translateX(60%);
+      background-color: #24388d;
+    }
+  }
+
+  & .awardDetail__list {
+    width: 100%;
+  }
+}
+
+.awardDetail__item {
+  width: 100%;
+  margin-bottom: 20px;
+  
+}
+
+.awardDetail__article__content {
+  width: 100%;
+  padding: 15px 40px 0 25px;
+}
+
+
+
+.listItem__title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  padding: 5px;
+  time {
+    font-size: 12px;
+    font-weight: 400;
+    color: #0F0F0F;
+    line-height: 12px;
+    letter-spacing: -0.04em;
+    margin-right: 10px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background: url(../../assets/images/icon-arrow-down.svg);
+  }
+}
+
+// 열린 디테일
+.awardDetail__article details[open] .listItem__title::after{
+  background: url(../../assets/images/icon-arrow-up.svg);
+}
+
+
+.listItem__thumbnail {
+  margin-bottom: 10px;
+}
+.listItem__description {
+  margin-bottom: 10px;
+
+
+  font-family: 'SpoqaHanSans';
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+
+  color: #0F0F0F;
+}
+.awardDetail__dateBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  dt {
+    padding: 3px 6px;
+    background: #24388D;
+    border-radius: 25px;
+
+    font-family: 'SpoqaHanSans';
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: #C8CDE2;
+
+    text-align: center;
+    line-height: 15.6px;
+  }
+  dd {
+
+    font-family: 'SpoqaHanSans';
+    font-weight: 700;
+    font-size: 11px;
+
+    letter-spacing: -0.02em;
+    color: #5B6AA9;
+  }
+}
